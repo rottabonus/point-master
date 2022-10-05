@@ -1,13 +1,10 @@
 import React from 'react';
 import * as RN from 'react-native';
 
-import {combinations} from './src/services/teams';
+import {createRounds} from './src/services/teams';
 
 const App = () => {
-  const result = combinations(
-    ['Felix', 'Seppo', 'Paavo', 'Annu', 'Fiona', 'Katja'],
-    3,
-  );
+  const result = createRounds(['Felix', 'Seppo', 'Paavo', 'Annu', 'Fiona'], 2);
   console.log(result);
   return (
     <RN.SafeAreaView>
